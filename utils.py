@@ -8,21 +8,22 @@ import keras as krs
 BINARY_FLAG = "binary"
 MULTI_FLAG = "multi"
 
+
 def load_data(catalogue=BINARY_FLAG):
     titles = []
     print("正在加载健康类别的数据...")
-    with open("data/health.txt", "r",encoding='utf-8') as f:
+    with open("data/health.txt", "r", encoding='utf-8') as f:
         for line in f.readlines():
             titles.append(line.strip())
 
     print("正在加载科技类别的数据...")
-    with open("data/tech.txt", "r",encoding='utf-8') as f:
+    with open("data/tech.txt", "r", encoding='utf-8') as f:
         for line in f.readlines():
             titles.append(line.strip())
 
     if catalogue == MULTI_FLAG:
         print("正在加载设计类别的数据...")
-        with open("data/design.txt", "r",encoding='utf-8') as f:
+        with open("data/design.txt", "r", encoding='utf-8') as f:
             for line in f.readlines():
                 titles.append(line.strip())
 
