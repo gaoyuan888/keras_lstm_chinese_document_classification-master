@@ -69,6 +69,8 @@ def build_netword(dict, catalogue=BINARY_FLAG, embedding_size=50, max_sequence_l
     elif catalogue == MULTI_FLAG:
         # 配置网络结构
         model = krs.Sequential()
+        # 将正整数（索引值）转换为固定尺寸的稠密向量。 例如： [[4], [20]] -> [[0.25, 0.1], [0.6, -0.2]]
+        # 该层只能用作模型中的第一层。
         model.add(krs.layers.Embedding(len(dict.items()), embedding_size, input_length=max_sequence_length))
         model.add(krs.layers.LSTM(32, dropout=0.2, recurrent_dropout=0.2))
         model.add(krs.layers.Dense(3))
