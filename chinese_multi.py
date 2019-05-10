@@ -38,7 +38,7 @@ model = utils.build_netword(catalogue=utils.MULTI_FLAG, dict=dict, embedding_siz
 model.load_weights("health_and_tech_design.h5")
 
 # 预测样本
-sen = "生病的问题很麻烦，大家一定要注意锻炼身体，积极向上"
+sen = "大学老师头疼，还坚持讲课"
 sen_prosessed = " ".join(jb.cut(sen, cut_all=True))
 sen_prosessed = vocab_processor.transform([sen_prosessed])
 sen_prosessed = np.array(list(sen_prosessed))
