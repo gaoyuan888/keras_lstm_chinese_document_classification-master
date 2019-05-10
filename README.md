@@ -1,5 +1,5 @@
 # 下载代码
-git clone https://github.com/Jinkeycode/keras_lstm_chinese_document_classification.git
+git clone https://github.com/gaoyuan888/keras_lstm_chinese_document_classification-master
 
 # 安装依赖
 pip install -r requirements.txt
